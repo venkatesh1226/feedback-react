@@ -1,13 +1,208 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+background-color:var(--purple);
+color: var(--brown);
+font-size: 22;
+margin:0;
+    --purple :#151D3B;
+    --green : #6EBF8B;
+    --brown: #DADBBD;
+    --red : #D82148;
+}
+/* Main Heading */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Feedback rating Number */
+.numberView{
+    width: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: -5%;
+    text-align: center;
+    z-index: 2;
+    background-color: var(--red);
+}
+
+.numberView.disable:hover{
+    background-color: var(--red);
+    
+}
+
+.numberView.disable{
+    background-color: var(--green);
+    color: var(--purple);
+}
+
+
+
+/* Feedback text View i.e., Comments */
+.card>div>.textView{
+    width: fit-content;
+    flex-grow: 2;
+    padding:    8% 2% 2% 4%;
+    margin-top: -10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    color: var(--purple);
+    z-index: 0; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    max-width: 700px;
+    min-width: 600px;
+   
+}
+/* Single card */
+.card>div{
+    display: flex;
+    flex-direction: column;
+    margin:10px; 
+    
+    
+}
+/* Total Cards */
+.feedbackList
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:10px;  
+      
+}
+/* Cross button */
+.cross{
+  
+  z-index: 3;
+  border-radius: 50px;
+}
+
+.edit{
+    z-index: 3;
+    width: fit-content;
+    border-radius: 50px;
+    
+}
+
+.controlButtons{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+   margin-bottom: -5%;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+.feedbackForm{
+    max-width: 80%;
+    /* min-width: 50%; */
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--brown);
+    color: var(--purple);
+    position: relative;
+    margin: auto;
+}
+
+.feedbackForm>h4{
+    background-color: var(--brown);
+    color: var(--purple);
+    margin: 10px;
+}
+
+.feedbackForm>form>textarea{
+    background-color: var(--brown);
+    color: var(--purple);
+    padding: 10px;
+    margin:40px;
+    border-radius: 20px;
+}
+
+.feedbackForm>form{
+    background-color: var(--brown);
+    color: var(--purple);
+    
+}
+
+.feedbackForm>button{
+    border-radius: 10px;
+    margin: 10px;
+    padding:5px 10px;
+}
+
+.feedbackForm>.rating{
+    margin: 10px;
+    background-color: black;
+}
+
+.rateList{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px;
+    max-width: 400px;
+    flex-wrap:wrap;
+    
+}
+
+.rateList>div{
+    margin: 10px;
+}
+
+/* Dark View */
+/* For reviews seeing */
+.dark>div>.textView{
+    background-color: black;
+    color: var(--brown);
+}
+/* For  reviews entering*/
+.feedbackForm.dark{
+ background-color: black;
+    color: var(--brown);
+   
+    position: relative;
+    margin: 25px auto;
+}
+.feedbackForm.dark>form{
+    background-color:black;
+    color: var(--purple);
+}
+
+.feedbackForm.dark>h4{
+    background-color: black;
+    color: var(--brown);
+    margin: 10px;
+}
+
+.feedbackForm.dark>form>input{
+    background-color: var(--brown);
+    color: black;
+    padding: 10px;
+}
+
+.feedbackForm.dark>button{
+    background-color: var(--red);
+    color: var(--purple);
+    
 }
