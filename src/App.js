@@ -11,15 +11,16 @@ import { createContext } from 'react'
 
 export var AppContext= createContext(null)
 var App = () => {
-    var [data, setData] = useState(FeedbackData);
+    let [data, setData] = useState(FeedbackData);
     var d = true;
     
-    var crossHandler = (id) => { 
+    var crossHandler =async (id) => { 
         const newItems=[]
         data.forEach(item => {
            if(item.id !== id)newItems.push(item); 
         }) 
-        setData(newItems)
+        data=newItems
+        await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
         console.log(data)
     }
 
