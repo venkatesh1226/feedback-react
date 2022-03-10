@@ -14,13 +14,12 @@ var App = () => {
     let [data, setData] = useState(FeedbackData);
     var d = true;
     
-    var crossHandler =async (id) => { 
+    var crossHandler = (id) => { 
         const newItems=[]
         data.forEach(item => {
            if(item.id !== id)newItems.push(item); 
         }) 
         data=newItems
-        await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
         console.log(data)
     }
 
